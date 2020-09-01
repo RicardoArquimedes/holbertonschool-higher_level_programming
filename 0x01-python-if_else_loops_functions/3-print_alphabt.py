@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import string
-for alpha_letters in string.ascii_lowercase:
-    if alpha_letters not in 'qe':
-       print(alpha_letters, end="")
+for alpha_letters in range(97, 123):
+    if (alpha_letters) == 101 or (alpha_letters) == 113:
+        continue
+    print("{:c}".format(alpha_letters), end="")
