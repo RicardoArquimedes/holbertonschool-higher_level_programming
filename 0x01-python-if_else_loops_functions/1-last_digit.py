@@ -5,8 +5,8 @@ m = number % 10
 str = 'last digit of'
 
 if m > 5:
-    print("{} {:d} is, and is greater than 5" .format(str, number, m))
+    print("{} {:d} is and is greater than 5" .format(str, number, m))
 elif m == 0:
-    print("{} {:d} is, and is 0" .format(str, number, m))
+    print("{} {:d} is and is 0" .format(str, number, m))
 else:
-    print("{} {:d} is, and is less than 6 and not 0" .format(str, number, m))
+    print("{} {:d} is and is less than 6 and not 0" .format(str, number, m))
