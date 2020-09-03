@@ -2,13 +2,12 @@
 if __name__ == "__main__":
     from sys import argv
 
-b = len(argv) - 1
-if b == 0:
+b = 1
+if len(argv) == 0:
     print(len(argv) - 1, 'arguments.')
 
-elif b == 1:
-    print(len(argv) - 1, 'arguments:')
-    print("{:d}: {:s}".format(b, argv[b]))
+elif len(argv) == 1:
+    print("{:d} arguments.".format(len(argv) - 1))
 
 else:
     print(len(argv) - 1, 'arguments:')
