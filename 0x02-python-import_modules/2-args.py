@@ -8,9 +8,9 @@ if b == 0:
 
 elif b == 1:
     print(len(argv) - 1, 'arguments:')
-    print("{}: {}".format(b, argv[b]))
+    print("{:d}: {:s}".format(b, argv[b]))
 
 else:
     print(len(argv) - 1, 'arguments:')
     for a in range(1, len(argv)):
-        print("{}: {}".format(a, argv[a]))
+        print("{:d}: {:s}".format(a, argv[a]))
