@@ -2,10 +2,11 @@
 if __name__ == "__main__":
     from sys import argv
 
-if len(argv) == 0:
-    print(len(argv) - 1, 'arguments.')
+i = 1
+if len(argv) == 1:
+     print("{:d} arguments.".format(len(argv) - 1))
 
-elif len(argv) == 1:
+elif len(argv) == 2:
     print("{:d} arguments:".format(len(argv) - 1))
 
 else:
