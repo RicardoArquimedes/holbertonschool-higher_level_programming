@@ -13,4 +13,4 @@ elif b == 1:
 else:
     print(len(argv) - 1, 'arguments:')
     for a in range(1, len(argv)):
-        print("{}: {}".format(a, argv[a]))
+        print("{}: {}".format(a, argv[a])
