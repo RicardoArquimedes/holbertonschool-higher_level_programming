@@ -2,7 +2,6 @@
 if __name__ == "__main__":
     from sys import argv
 
-b = 1
 if len(argv) == 0:
     print(len(argv) - 1, 'arguments.')
 
