@@ -4,7 +4,7 @@ if __name__ == "__main__":
 
 b = len(argv) - 1
 if b == 0:
-    print('arguments.')
+    print(len(argv) - 1, 'arguments.')
 
 else:
     print(len(argv) - 1, 'arguments:')
