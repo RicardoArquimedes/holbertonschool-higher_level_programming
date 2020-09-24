@@ -8,7 +8,11 @@
      
 <h1 align="center">Higher-level programming</h1>
 
-<h2 align="center"> 0x07. Python - Test-driven development</h2>
+<h2 align="left"> 0x07. Python - Test-driven development</h2>
+
+<p align="center">
+<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/246/giphy-4.gif" width="280"/>
+</p>
 
 The doctest module searches for pieces of text that look like interactive Python sessions, and then executes those sessions to verify that they work exactly as shown. There are several common ways to use doctest:
 
