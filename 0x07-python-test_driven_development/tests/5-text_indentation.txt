@@ -1,3 +1,4 @@
+  
 The ``5-text_indentation`` module
 ======================
 
@@ -11,29 +12,25 @@ This is an test text file in reStructuredText format.  First import
 
 Now use it:
 
-    >>> text_indentation("  Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    <BLANKLINE>
-
-    >>> text_indentation("Lorem ipsum dolor sit amet?, consectetur adipiscing elit.  ")
-    Lorem ipsum dolor sit amet?
-    <BLANKLINE>
-    , consectetur adipiscing elit.
-    <BLANKLINE>
-
-    >>> text_indentation(":?.")
-    :
-    <BLANKLINE>
-    ?
-    <BLANKLINE>
-    .
-    <BLANKLINE>
-
-    >>> text_indentation("Hello.Hello")
-    Hello.
-    <BLANKLINE>
-    Hello
-
-    >>> text_indentation(["Lorem ipsum", "Lorem ipsum"])
+    >>> text_indentation(5)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+
+    >>> text_indentation("Holberton School")
+    Holberton School
+
+    >>> text_indentation("Holberton. School: Colombia?")
+    Holberton.
+    <BLANKLINE>
+    School:
+    <BLANKLINE>
+    Colombia?
+    <BLANKLINE>
+
+    >>> text_indentation("")
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
