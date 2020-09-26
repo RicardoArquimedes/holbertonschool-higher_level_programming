@@ -38,7 +38,7 @@ Now use it:
     >>> text_indentation("Holberton.School")
     Holberton.
     <BLANKLINE>
-    chool
+    School
 
     >>> text_indentation("")
 
