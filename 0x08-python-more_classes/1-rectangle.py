@@ -7,8 +7,10 @@ rectanble by:(based on 0-rectangle.py)
 
 
 class Rectangle:
+
     """class Rectangle that defines a rectangle
     """
+
     def __init__(self, width=0, height=0):
         """construtor
         """
@@ -44,18 +46,19 @@ class Rectangle:
         else:
             self.__height = value
 
-        @property
-        def width(self):
-            """getter
-            """
+    @property
+    def width(self):
+        """getter
+        """
+        return self.__width
 
-        @width.setter
-        def width(self, value):
-            """setter
-            """
-            if type(value) != int:
-                raise TypeError("width must be an integer")
-            elif value < 0:
-                raise ValueError("width must be >= 0")
-            else:
-                self.__width = value
+    @width.setter
+    def width(self, value):
+        """setter
+        """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
