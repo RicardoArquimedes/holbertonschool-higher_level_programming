@@ -5,6 +5,7 @@
 
 
 class Rectangle:
+
     """class Rectangle that defines a rectangle
     """
     __error_1 = "width must be an integer"
