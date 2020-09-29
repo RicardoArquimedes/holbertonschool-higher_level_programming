@@ -1,16 +1,12 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 
-"""1-rectangle.py
-This module write a class Rectangle that defines a
-rectangle by:(based on 0-rectangle.py)
+"""This module contains an class that defines a rectangle.
 """
 
 
 class Rectangle:
-
     """class Rectangle that defines a rectangle
     """
-
     def __init__(self, width=0, height=0):
         """construtor
         """
