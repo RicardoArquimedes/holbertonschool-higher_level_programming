@@ -1,8 +1,8 @@
 #!/bin/usr/python3
 
-"""0-square.py
+"""1-rectangle.py
 This module write a class Rectangle that defines a
-rectanble by:(based on 0-rectangle.py)
+rectangle by:(based on 0-rectangle.py)
 """
 
 
