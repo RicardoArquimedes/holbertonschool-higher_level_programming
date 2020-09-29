@@ -4,6 +4,7 @@
 t"hat defines a rectangle by: (based on 4-rectangle.py)
 """
 
+
 class Rectangle:
     """class Rectangle that defines a rectangle
     """
