@@ -1,0 +1,35 @@
+#!/bin/bash
+
+ echo "type" >> 0-answer.txt
+ echo "id" >> 1-answer.txt
+ echo "No" >> 2-answer.txt
+ echo "Yes" >> 3-answer.txt
+ echo "Yes" >> 4-answer.txt
+ echo "No" >> 5-answer.txt
+ echo "True" >> 6-answer.txt
+ echo "True" >> 7-answer.txt
+ echo "True" >> 8-answer.txt
+ echo "True" >> 9-answer.txt
+ echo "True" >> 10-answer.txt
+ echo "False" >> 11-answer.txt
+ echo "True" >> 12-answer.txt
+ echo "True" >> 13-answer.txt
+ echo "[1, 2, 3, 4]" >> 14-answer.txt
+ echo "[1, 2, 3]" >> 15-answer.txt
+ echo "1" >> 16-answer.txt
+ echo "[1, 2, 3, 4]" >> 17-answer.txt
+ echo "[1, 2, 3]" >> 18-answer.txt
+ echo "Yes" >> 20-answer.txt
+ echo "Yes" >> 21-answer.txt
+ echo "No" >> 22-answer.txt
+ echo "Yes" >> 23-answer.txt
+ echo "True" >> 24-answer.txt
+ echo "False" >> 25-answer.txt
+ echo "True" >> 26-answer.txt
+ echo "No" >> 27-answer.txt
+ echo "Yes" >> 28-answer.txt
+ echo "1" >> 106-line1.txt
+ echo "0" >> 106-line2.txt
+ echo "No" >> 106-line3.txt
+ echo "Yes" >> 106-line4.txt
+ echo "1" >> 106-line5.txt
