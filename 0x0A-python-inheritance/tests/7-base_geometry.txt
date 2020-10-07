@@ -1,0 +1,102 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is an test text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+
+Now use it:
+
+        >>> try:
+        ...      bg.integer_validator("name", "John")
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] name must be an integer
+
+        >>> try:
+        ...      bg.integer_validator("name", 6)
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        
+        >>> try:
+        ...      bg.integer_validator("betty", -3)
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [ValueError] betty must be greater than 0
+
+        >>> try:
+        ...      bg.integer_validator("betty", 0)
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [ValueError] betty must be greater than 0
+
+        >>> try:
+        ...      bg.integer_validator("car")
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+        >>> try:
+        ...      bg.integer_validator()
+        ... except Exception as e:
+        ...      print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+        >>> try:
+        ...     bg.area()
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [Exception] area() is not implemented
+
+        >>> try:
+        ...     bg.integer_validator("car", [])
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", [1, 4])
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", ())
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", (1, ))
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", {})
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", {2, 4})
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", None)
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
+
+        >>> try:
+        ...     bg.integer_validator("car", True)
+        ... except Exception as e:
+        ...     print("[{}] {}".format(e.__class__.__name__, e))
+        [TypeError] car must be an integer
