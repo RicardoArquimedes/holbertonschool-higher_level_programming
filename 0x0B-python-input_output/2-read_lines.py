@@ -11,10 +11,13 @@ def read_lines(filename="", nb_lines=0):
         filename {str} -- This is the file to read(default: {""})
         nb_lines {int} -- This is the number line to read(default: {0})
     """
+    lines = 0
     with open(filename, 'r', encoding='utf-8') as my_file:
-        f_list = my_file.readlines()
-        if nb_lines <= 0 or nb_lines > len(f_list):
-            nb_lines = len(f_list)
-        for i in range(nb_lines):
-            print(f_list[i], end='')
-        return 1 + i
+        while True:
+            rd = my_file.readline()
+            if rd is '':
+                break
+            print("{}".format(rd), end="")
+            lines += 1
+            if lines == nb_lines:
+                break
