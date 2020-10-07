@@ -9,4 +9,5 @@ def number_of_lines(filename=""):
         """
         with open(filename, mode='r', encoding="utf-8") as my_file:
             for i, l in enumerate(my_file):
-                return i+1
+                pass
+        return i + 1
