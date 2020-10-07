@@ -7,7 +7,8 @@ def number_of_lines(filename=""):
         Args:
             filename (str, optional): file path. Defaults to "".
         """
+        i = 0
         with open(filename, mode='r', encoding="utf-8") as my_file:
-            for i, l in enumerate(my_file):
-                pass
-        return i + 1
+            for line in my_file:
+                i = i + 1
+            return i
