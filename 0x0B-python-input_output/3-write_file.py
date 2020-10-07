@@ -4,7 +4,9 @@ in a new file"""
 
 
 def write_file(filename="", text=""):
-    """Keyword Arguments:
+    """[summary]
+    
+    Keyword Arguments:
         filename {str} -- the file to read(default: {""})
         text {str} -- Text to create in a new file (default: {""})
     """
