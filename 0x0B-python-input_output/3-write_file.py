@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Write a Module that write
-in a new file"""
+"""Write a Module that write"""
 
 
 def write_file(filename="", text=""):
