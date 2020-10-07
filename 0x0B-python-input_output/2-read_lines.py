@@ -17,4 +17,4 @@ def read_lines(filename="", nb_lines=0):
             nb_lines = len(f_list)
         for i in range(nb_lines):
             print(f_list[i], end='')
-    return i + 1
+        return 1 + i
