@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+"""Module
+"""
+
+
 class MyList(list):
-    def print_sorted(self):
-        print(sorted(self))
+
+        """Class
+        Arguments:
+            list {[type]} -- [description]
+        """
+
+        def print_sorted(self):
+                """Method
+                """
+                print(sorted(self))
