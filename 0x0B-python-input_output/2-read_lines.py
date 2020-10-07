@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""In this module it create a function that read
-    n lines of a file
-"""
+"""In this module it create a function that read"""
 
 
 def read_lines(filename="", nb_lines=0):
