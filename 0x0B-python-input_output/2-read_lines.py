@@ -11,7 +11,7 @@ def read_lines(filename="", nb_lines=0):
         filename {str} -- This is the file to read(default: {""})
         nb_lines {int} -- This is the number line to read(default: {0})
     """
-    with open(filename, mode='r', encoding='utf-8') as my_file:
+    with open(filename, 'r', encoding='utf-8') as my_file:
         f_list = my_file.readlines()
         if nb_lines <= 0 or nb_lines > len(f_list):
             nb_lines = len(f_list)
