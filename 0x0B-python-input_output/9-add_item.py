@@ -9,9 +9,10 @@ load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
 filename = 'add_item.json'
 
-
-my_list = load_from_json_file(filename)
-my_list = []
+try:
+        my_list = load_from_json_file(filename)
+except FileNotFoundError:
+        my_list = []
 words = argv[1:]
 for word in words:
     my_list.append(word)
