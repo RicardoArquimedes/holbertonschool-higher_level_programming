@@ -105,12 +105,11 @@ class Rectangle(Base):
         Returns:
             [type] -- [description]
         """
-        return ("[Rectangle]({}) {}/{} - {}/{}".format(self.id,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x,
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
-                )
 
     def update(self, *parameter, **kwargs):
         """Method update"""
