@@ -71,17 +71,19 @@ class Base:
                 except FileNotFoundError:
                         return []
 
-        @classmethod
-        def load_from_file(cls):
-                """load from file"""
-                list_instances = []
-                ext = ".json"
-                try:
-                        with open(cls.__name__+ext, encoding='utf-8') as afile:
-                                list_dict = cls.from_json_string(afile.read())
-                        for way in list_dict:
-                                dummy = cls.create(**way)
-                                list_instances.append(dummy)
-                        return list_instances
-                except FileNotFoundError:
-                        return []
+    @classmethod
+    def load_from_file_csv(cls):
+        """ load_from_file_csv """
+        filename = '{}.csv'.format(cls.__name__)
+        try:
+            with open(filename, mode='r', newline='') as file:
+                if cls.__name__ is 'Square':
+                    obj_field = ["id", "size", "x", "y"]
+                else:
+                    obj_field = ["id", "width", "height", "x", "y"]
+                dic_list = csv.DictReader(file, fieldnames=obj_field)
+                dic_list = [{key: int(value) for key, value in dic.items()}
+                              for dic in dic_list]
+                return [cls.create(**dicts) for dicts in dic_list]
+        except IOError:
+            return []
