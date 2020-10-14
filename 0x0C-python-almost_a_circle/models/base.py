@@ -70,3 +70,18 @@ class Base:
                         return list_instances
                 except FileNotFoundError:
                         return []
+
+        @classmethod
+        def load_from_file(cls):
+                """load from file"""
+                list_instances = []
+                ext = ".json"
+                try:
+                        with open(cls.__name__+ext, encoding='utf-8') as afile:
+                                list_dict = cls.from_json_string(afile.read())
+                        for way in list_dict:
+                                dummy = cls.create(**way)
+                                list_instances.append(dummy)
+                        return list_instances
+                except FileNotFoundError:
+                        return []
