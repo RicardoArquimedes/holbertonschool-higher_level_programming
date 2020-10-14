@@ -7,6 +7,7 @@ import csv
 
 
 class Base:
+
     """This is a Class Base"""
 
     __nb_objects = 0
@@ -96,8 +97,6 @@ class Base:
                 doc_file = csv.DictWriter(file, fieldnames=obj_field)
                 [doc_file.writerow(item.to_dictionary()) for item in list_objs]
 
-        
-
     @classmethod
     def load_from_file_csv(cls):
         """ load_from_file_csv """
@@ -110,7 +109,7 @@ class Base:
                     obj_field = ["id", "width", "height", "x", "y"]
                 dic_list = csv.DictReader(file, fieldnames=obj_field)
                 dic_list = [{key: int(value) for key, value in dic.items()}
-                              for dic in dic_list]
+                            for dic in dic_list]
                 return [cls.create(**dicts) for dicts in dic_list]
         except IOError:
             return []
