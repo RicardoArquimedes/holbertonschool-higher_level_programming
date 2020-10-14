@@ -6,18 +6,18 @@ import unittest
 from models.base import Base
 
 
-
 class TestBase(unittest.TestCase):
+
     """ Test Cases for Base Class """
 
     def setUp(self):
         """This method set up initial state for all test methods"""
         Base._Base__nb_objects = 0
-        #print("setUp")
+        # print("setUp")
 
     def tearDown(self):
         """This method to perform cleanup after each test method completes"""
-        #print("tearDown")
+        # print("tearDown")
 
     def test_id_single(self):
         """ Test for set id function """
@@ -35,8 +35,6 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         self.assertEqual(b0.id, 1)
         self.assertEqual(b1.id, 2)
-
-
 
     def test_id_error(self):
         """ Test for set id function """
