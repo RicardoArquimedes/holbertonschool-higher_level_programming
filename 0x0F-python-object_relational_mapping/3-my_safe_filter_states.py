@@ -19,11 +19,12 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * \
+    query_safe = "SELECT * \
                     FROM states \
                     WHERE name=%(state_db)s \
-                    ORDER BY id ASC".{'state_db': state_db})
+                    ORDER BY id ASC"
 
+    cursor.execute(query_safe, {'state_db': state_db})
     data = cursor.fetchall()
 
     for states in data:
