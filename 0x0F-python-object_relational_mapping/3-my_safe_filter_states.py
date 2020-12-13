@@ -22,7 +22,7 @@ if __name__ == "__main__":
     cursor.execute("SELECT * \
                     FROM states \
                     WHERE name=%(state_db)s \
-                    ORDER BY id ASC")
+                    ORDER BY id ASC".{'state_db': state_db})
 
     data = cursor.fetchall()
 
