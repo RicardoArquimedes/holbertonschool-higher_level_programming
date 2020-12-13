@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module doc"""
 
+
 import MySQLdb
 from sys import argv
 
@@ -8,7 +9,7 @@ if __name__ == "__main__":
     user_db = argv[1]
     pass_db = argv[2]
     name_db = argv[3]
-    state_name = argv[4]
+    state_db = argv[4]
 
     db = MySQLdb.connect(host="localhost",
                          port=3306,
@@ -18,13 +19,11 @@ if __name__ == "__main__":
                          charset="utf8")
 
     cursor = db.cursor()
+    cursor.execute("SELECT * \
+             FROM states \
+             WHERE name=%s \
+             ORDER BY id ASC", (state_db,))
 
-    query_safe = "SELECT * \
-                    FROM states \
-                    WHERE name=%(state_db)s \
-                    ORDER BY id ASC"
-
-    cursor.execute(query_safe, {'state_db': state_db})
     data = cursor.fetchall()
 
     for states in data:
