@@ -13,7 +13,7 @@ if __name__ == "__main__":
     connect = 'mysql+mysqldb://{}:{}@localhost:3306/{}'. \
         format(argv[1], argv[2], argv[3])
 
-    engine = create_engine(con, pool_pre_ping=True)
+    engine = create_engine(connect, pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
