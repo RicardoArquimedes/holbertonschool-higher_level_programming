@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ find a peak funct"""
 
-def find_peak(integer_list):
+def find_peak(list_of_integers):
     """ sorted peak"""
-    if len(integer_list) == 0:
+    if len(list_of_integers) == 0:
         return None
-    integer_list.sort()
-    return integer_list[-1]
+    list_of_integers.sort()
+    return list_of_integers[-1]
