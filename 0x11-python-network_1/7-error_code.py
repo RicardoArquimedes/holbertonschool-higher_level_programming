@@ -1,4 +1,3 @@
-  
 #!/usr/bin/python3
 """sends a request to the URL and displays the body"""
 import sys
