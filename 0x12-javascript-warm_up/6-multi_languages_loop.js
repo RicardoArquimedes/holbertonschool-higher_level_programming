@@ -3,6 +3,6 @@
 // using an array of string and a loop
 
 const multiLanguage = ['C is fun', 'Python is cool', 'Javascript is amazing'];
-for (const i in multiLanguage) {
+for (const i of multiLanguage) {
   console.log(i);
 }
